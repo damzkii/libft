@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahermawa <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ahermawa <ahermawa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/23 21:04:24 by ahermawa          #+#    #+#             */
-/*   Updated: 2021/12/23 21:04:25 by ahermawa         ###   ########.fr       */
+/*   Updated: 2022/05/13 14:02:27 by ahermawa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,9 @@ typedef struct s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
+
+# define BUFF_SIZE 32
+# define FD_SIZE 4096
 
 size_t	ft_strlcat(char *dst, const char *src, size_t n);
 size_t	ft_strlen(const char *s);
@@ -76,6 +79,7 @@ int		ft_isascii(int c);
 int		ft_isprint(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
+int		get_next_line(const int fd, char **line);
 t_list	*ft_lstnew(void const *content, size_t content_size);
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
