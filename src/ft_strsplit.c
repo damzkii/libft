@@ -6,7 +6,7 @@
 /*   By: ahermawa <ahermawa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 17:39:18 by ahermawa          #+#    #+#             */
-/*   Updated: 2022/04/13 16:53:38 by ahermawa         ###   ########.fr       */
+/*   Updated: 2022/09/25 15:09:56 by ahermawa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ static char	**ft_freshsplit(char **fresh, char const *str, char delim, int word)
 			i++;
 		fresh[hold] = ft_strsub(str, start, i - start);
 		if (!fresh[hold])
-			return (ft_free_arr(fresh, word));
+			return (ft_free_arr((void **)fresh, word));
 		hold++;
 	}
 	return (fresh);

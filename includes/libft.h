@@ -6,7 +6,7 @@
 /*   By: ahermawa <ahermawa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/23 21:04:24 by ahermawa          #+#    #+#             */
-/*   Updated: 2022/05/13 14:02:27 by ahermawa         ###   ########.fr       */
+/*   Updated: 2022/09/25 15:07:54 by ahermawa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,8 +87,9 @@ void	ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void	ft_lstadd(t_list **alst, t_list *new);
 void	ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 
+void	ft_free(void *arr, size_t len);
 void	ft_revprint(char *str);
-void	*ft_free_arr(char **array, size_t size);
+void	*ft_free_arr(void **array, size_t size);
 char	*ft_strrev(char *str);
 int		ft_intlen(long int n);
 int		ft_isspace(const char c);
